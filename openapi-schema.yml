@@ -1,0 +1,918 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /users/:
+    get:
+      operationId: listUsers
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+    post:
+      operationId: createUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+  /users/search/:
+    get:
+      operationId: SearchUserUser
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+  /users/swapdevice/:
+    get:
+      operationId: swapDeviceUser
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+    put:
+      operationId: swapDeviceUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+  /users/{id}/:
+    get:
+      operationId: retrieveUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+    put:
+      operationId: updateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+    patch:
+      operationId: partialUpdateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+    delete:
+      operationId: destroyUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - users
+  /users/{id}/history/:
+    get:
+      operationId: UserHistoryUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - users
+  /types/:
+    get:
+      operationId: listTypes
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Type'
+          description: ''
+      tags:
+      - types
+    post:
+      operationId: createType
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Type'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Type'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Type'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Type'
+          description: ''
+      tags:
+      - types
+  /types/{id}/:
+    get:
+      operationId: retrieveType
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this type.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Type'
+          description: ''
+      tags:
+      - types
+    put:
+      operationId: updateType
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this type.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Type'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Type'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Type'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Type'
+          description: ''
+      tags:
+      - types
+    patch:
+      operationId: partialUpdateType
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this type.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Type'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Type'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Type'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Type'
+          description: ''
+      tags:
+      - types
+    delete:
+      operationId: destroyType
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this type.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - types
+  /devices/:
+    get:
+      operationId: listDevices
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+    post:
+      operationId: createDevice
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Device'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Device'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Device'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+  /devices/search/:
+    get:
+      operationId: searchDeviceDevice
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+  /devices/{id}/:
+    get:
+      operationId: retrieveDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this device.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+    put:
+      operationId: updateDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this device.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Device'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Device'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Device'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+    patch:
+      operationId: partialUpdateDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this device.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Device'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Device'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Device'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+    delete:
+      operationId: destroyDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this device.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - devices
+  /devices/{id}/history/:
+    get:
+      operationId: DeviceHistoryDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this device.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+  /devicehistory/:
+    get:
+      operationId: listLogDevices
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DeviceLog'
+          description: ''
+      tags:
+      - devicehistory
+    post:
+      operationId: createLogDevice
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceLog'
+          description: ''
+      tags:
+      - devicehistory
+  /devicehistory/{id}/:
+    get:
+      operationId: retrieveLogDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log device.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceLog'
+          description: ''
+      tags:
+      - devicehistory
+    put:
+      operationId: updateLogDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log device.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceLog'
+          description: ''
+      tags:
+      - devicehistory
+    patch:
+      operationId: partialUpdateLogDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log device.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DeviceLog'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceLog'
+          description: ''
+      tags:
+      - devicehistory
+    delete:
+      operationId: destroyLogDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log device.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - devicehistory
+  /userhistory/:
+    get:
+      operationId: listLogUsers
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserLog'
+          description: ''
+      tags:
+      - userhistory
+    post:
+      operationId: createLogUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserLog'
+          description: ''
+      tags:
+      - userhistory
+  /userhistory/{id}/:
+    get:
+      operationId: retrieveLogUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log user.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserLog'
+          description: ''
+      tags:
+      - userhistory
+    put:
+      operationId: updateLogUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log user.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserLog'
+          description: ''
+      tags:
+      - userhistory
+    patch:
+      operationId: partialUpdateLogUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log user.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserLog'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserLog'
+          description: ''
+      tags:
+      - userhistory
+    delete:
+      operationId: destroyLogUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this log user.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - userhistory
+  /devices/{id}/allocate/:
+    patch:
+      operationId: deviceAllocateDevice
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this device.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Device'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Device'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Device'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: ''
+      tags:
+      - devices
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+\z
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        device:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                readOnly: true
+              deviceName:
+                type: string
+                maxLength: 100
+              deviceType:
+                type: string
+                readOnly: true
+            required:
+            - deviceName
+          readOnly: true
+      required:
+      - username
+    Type:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        typeName:
+          type: string
+          maxLength: 50
+      required:
+      - typeName
+    Device:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        deviceName:
+          type: string
+          maxLength: 100
+        deviceUser:
+          type: string
+          readOnly: true
+        deviceType:
+          type: integer
+      required:
+      - deviceName
+      - deviceType
+    DeviceLog:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        logTitle:
+          type: string
+          maxLength: 100
+        logDevice:
+          type: string
+          readOnly: true
+        logTime:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - logTitle
+    UserLog:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        logTitle:
+          type: string
+          maxLength: 100
+        logUser:
+          type: string
+          readOnly: true
+        logTime:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - logTitle
