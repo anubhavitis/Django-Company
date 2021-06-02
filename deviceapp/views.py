@@ -165,7 +165,7 @@ class TypeViewset(viewsets.ModelViewSet):
 
 
 class DeviceViewset(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticated]
     queryset = Device.objects.all()
     serializer_class = DeviceSerializer
     pagination_class = MyPagination
@@ -187,7 +187,6 @@ class DeviceViewset(viewsets.ModelViewSet):
     @action(
         methods=['GET'],
         detail=True,
-        permission_classes=[IsAuthenticatedOrReadOnly],
         url_path='history',
         url_name='history'
     )
@@ -198,7 +197,6 @@ class DeviceViewset(viewsets.ModelViewSet):
     @action(
         methods=['GET'],
         detail=False,
-        permission_classes=[IsAuthenticatedOrReadOnly],
         url_path='search',
         url_name='Device-search'
     )
@@ -212,7 +210,6 @@ class DeviceViewset(viewsets.ModelViewSet):
     @action(
         methods=['PATCH'],
         detail=True,
-        permission_classes=[IsAuthenticatedOrReadOnly],
         url_path='allocate',
         url_name='Allocate Device'
     )
@@ -244,7 +241,6 @@ class DeviceViewset(viewsets.ModelViewSet):
     @action(
         methods=['PATCH'],
         detail=True,
-        permission_classes=[IsAuthenticatedOrReadOnly],
         url_path='deallocate',
         url_name='Deallocate Device'
     )
