@@ -10,6 +10,7 @@ pyyaml = "*"
 uritemplate = "*"
 drf-yasg = "*"
 dj-rest-auth = "*"
+celery = "==5.0"
 
 [dev-packages]
 autopep8 = "*"

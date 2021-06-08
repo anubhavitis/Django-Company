@@ -10,7 +10,20 @@ from django.contrib.auth import get_user_model
 from rest_framework import generics, views, viewsets, filters
 from rest_framework.decorators import action
 from .serializers import *
+
+
+from .tasks import *
+from django.http import HttpResponse
+from datetime import datetime
 # Create your views here.
+
+
+def index(self):
+    prev = datetime.now().second
+    send_mail_task.delay()
+    # sleepy(1)
+    tot = datetime.now().second - prev
+    return HttpResponse("<h1> Hello, World.</h1> <h2> Time Taken:" + str(tot) + "s</h2>")
 
 
 class MyPagination(pagination.PageNumberPagination):
