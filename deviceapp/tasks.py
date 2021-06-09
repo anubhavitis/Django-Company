@@ -8,12 +8,6 @@ from decouple import config
 
 
 @shared_task
-def send_mail():
-    sleep(2)
-    return None
-
-
-@shared_task
 def send_mail_task(to):
     send_mail(
         'Hello, from Celery',
