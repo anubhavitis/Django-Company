@@ -11,6 +11,8 @@ uritemplate = "*"
 drf-yasg = "*"
 dj-rest-auth = "*"
 celery = "==5.0"
+redis = "*"
+python-decouple = "*"
 
 [dev-packages]
 autopep8 = "*"

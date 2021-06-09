@@ -150,11 +150,9 @@ ACCEPT_CONTENT = ['application/json']
 RESULT_SERIALIZER = 'json'
 TASK_SERIALIZER = 'json'
 
-from decouple import config
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = config('myemail')
-EMAIL_HOST_PASSWORD = config('mypassword')
+EMAIL_HOST_USER = os.environ.get('myemail')
+EMAIL_HOST_PASSWORD = os.environ.get('mypassword')
 EMAIL_PORT = 587

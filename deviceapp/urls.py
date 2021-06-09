@@ -14,6 +14,4 @@ rou.register('devicehistory', LogDeviceViewset,
              basename="LogDeviceViewSetEndpoint")
 rou.register('userhistory', LogUserViewset, basename="LogUserViewSetEndpoint")
 
-urlpatterns = [
-    path('', index),
-]+rou.urls
+urlpatterns = rou.urls

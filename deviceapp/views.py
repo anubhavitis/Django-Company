@@ -1,3 +1,4 @@
+from datetime import datetime
 from rest_framework.fields import NullBooleanField
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
@@ -10,21 +11,8 @@ from django.contrib.auth import get_user_model
 from rest_framework import generics, views, viewsets, filters
 from rest_framework.decorators import action
 from .serializers import *
-
-
-from .tasks import *
-from django.http import HttpResponse
-from datetime import datetime
+from .tasks import send_mail_task
 # Create your views here.
-
-
-def index(self):
-    prev = datetime.now().second
-    send_mail_task.delay()
-    # sleepy(1)
-    tot = datetime.now().second - prev
-    return HttpResponse("<h1> Hello, World.</h1> <h2> Time Taken:" + str(tot) + "s</h2>")
-
 
 class MyPagination(pagination.PageNumberPagination):
     page_size_query_param = 'limit'
@@ -86,6 +74,7 @@ class UserViewset(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         id = serializer.save()
         addUserLog('POST', id)
+        send_mail_task.delay(id.email)
 
     def update(self, request, *args, **kwargs):
         inst = self.get_object()
