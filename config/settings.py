@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import django_heroku
+import dj_database_url
 from decouple import config
 from pathlib import Path
 import os
@@ -109,6 +111,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -167,6 +171,4 @@ EMAIL_HOST_USER = config('myemail')
 EMAIL_HOST_PASSWORD = config('mypassword')
 EMAIL_PORT = 587
 
-import django_heroku
 django_heroku.settings(locals())
-

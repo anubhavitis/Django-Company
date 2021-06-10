@@ -16,6 +16,7 @@ python-decouple = "*"
 django-cors-headers = "*"
 django-heroku = "*"
 gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 autopep8 = "*"

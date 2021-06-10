@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a5f1c25e7536281258bb0dc6dd608e9181e4dffcde3c7c05b839d5eef70be495"
+            "sha256": "1de6a79779e4c55037481a5ef2a4bf98dff0cfc0b4c73407c3782061115af063"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -102,6 +102,7 @@
                 "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163",
                 "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"
             ],
+            "index": "pypi",
             "version": "==0.5.0"
         },
         "dj-rest-auth": {
@@ -351,11 +352,11 @@
         },
         "ruamel.yaml": {
             "hashes": [
-                "sha256:86a8d429ca7288aff0b27f365ffd53e9cee66345b23c8ed6370791c72f9f9f03",
-                "sha256:d0019c37eb4a5faac9573ad913266825cd818e4a8529acef0ad927d1e4c0437c"
+                "sha256:374373b4743aee9f6d9f40bea600fe020a7ac7ae36b838b4a6a93f72b584a14c",
+                "sha256:8873a6f5516e0d848c92418b0b006519c0566b6cd0dcee7deb9bf399e2bd204f"
             ],
             "markers": "python_version >= '3'",
-            "version": "==0.17.8"
+            "version": "==0.17.9"
         },
         "ruamel.yaml.clib": {
             "hashes": [
