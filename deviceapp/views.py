@@ -167,7 +167,7 @@ class TypeViewset(viewsets.ModelViewSet):
 
 
 class DeviceViewset(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Device.objects.all()
     serializer_class = DeviceSerializer
     pagination_class = MyPagination
