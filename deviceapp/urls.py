@@ -2,7 +2,7 @@ from django.db.models import base
 from django.urls import path
 from rest_framework import urlpatterns
 from rest_framework.routers import SimpleRouter
-from .views import DeviceViewset, LogDeviceViewset, LogUserViewset, UserViewset, TypeViewset, index
+from .views import DeviceViewset, LogDeviceViewset, LogUserViewset, UserViewset, TypeViewset
 # from django.urls import
 
 rou = SimpleRouter()

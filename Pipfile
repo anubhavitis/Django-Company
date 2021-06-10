@@ -13,6 +13,8 @@ dj-rest-auth = "*"
 celery = "==5.0"
 redis = "*"
 python-decouple = "*"
+django-cors-headers = "*"
+django-heroku = "*"
 
 [dev-packages]
 autopep8 = "*"

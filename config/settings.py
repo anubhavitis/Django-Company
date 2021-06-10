@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from decouple import config
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
 
     'deviceapp',
 
+    'corsheaders',
     'dj_rest_auth',
     'rest_framework',
     'rest_framework.authtoken',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # For Cors
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +58,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'https://icompany.herokuapp.com',
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -150,7 +159,6 @@ ACCEPT_CONTENT = ['application/json']
 RESULT_SERIALIZER = 'json'
 TASK_SERIALIZER = 'json'
 
-from decouple import config
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
@@ -158,3 +166,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = config('myemail')
 EMAIL_HOST_PASSWORD = config('mypassword')
 EMAIL_PORT = 587
+
+import django_heroku
+django_heroku.settings(locals())
+
